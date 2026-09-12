@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="img/hero.webp" media="(min-width: 761px)">
   <link rel="preload" as="image" href="img/hero-movil.webp" media="(max-width: 760px)">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body class="is-locked">
 
@@ -58,7 +58,7 @@
 <section class="hero" id="inicio">
   <picture class="hero__bg">
     <source media="(max-width: 760px)" srcset="img/hero-movil.webp">
-    <img src="img/hero.webp" alt="Erick besa las manos de Dariana frente a la barranca al atardecer" fetchpriority="high">
+    <img src="img/hero.webp" alt="Erick besa en la mejilla a Dariana frente a la barranca al atardecer" fetchpriority="high">
   </picture>
   <div class="hero__shade"></div>
   <div class="hero__content">
@@ -84,6 +84,7 @@
 <section class="section invitation" id="invitacion">
   <div class="container narrow center reveal">
     <p class="guest-banner" id="guestBanner" hidden></p>
+    <figure class="portrait"><img src="img/retrato.webp" alt="Erick besa las manos de Dariana" loading="lazy"></figure>
     <p class="script">Con la bendición de Dios</p>
     <p class="lead">y el amor de nuestros padres</p>
     <div class="parents">
@@ -177,7 +178,7 @@
 
     <div class="event__grid">
       <article class="event-card reveal">
-        <figure class="event-card__img"><img src="img/ceremonia.webp" alt="Pasillo de ceremonia decorado con flores" loading="lazy"></figure>
+        <figure class="event-card__img"><img src="img/ceremonia.webp" alt="Dariana abraza a Erick y muestra su anillo de compromiso" loading="lazy"></figure>
         <div class="event-card__body">
           <span class="event-card__tag">Ceremonia religiosa</span>
           <h3>Iglesia de Santa Ana</h3>
@@ -193,7 +194,7 @@
       </article>
 
       <article class="event-card reveal">
-        <figure class="event-card__img"><img src="img/recepcion.webp" alt="Mesa de la recepción decorada con flores y velas" loading="lazy"></figure>
+        <figure class="event-card__img"><img src="img/recepcion.webp" alt="Dariana y Erick con el trío bajo el letrero Marry Me" loading="lazy"></figure>
         <div class="event-card__body">
           <span class="event-card__tag">Recepción</span>
           <h3>Hacienda Xcanatún</h3>
@@ -256,7 +257,7 @@
 <!-- ============ MENÚ ============ -->
 <section class="section menu" id="menu">
   <div class="container split">
-    <figure class="split__img reveal"><img src="img/menu.webp" alt="Platillo servido en la cena" loading="lazy"></figure>
+    <figure class="split__img reveal"><img src="img/menu.webp" alt="Mesa para dos con velas y flores el día de la pedida" loading="lazy"></figure>
     <div class="split__body reveal">
       <p class="eyebrow">A la mesa</p>
       <h2>Menú</h2>
@@ -434,9 +435,9 @@
       <p class="section__sub">Tenemos tarifa preferencial en estos hoteles con el código <strong class="code">BODADYE27</strong>. Reserva antes del 15 de diciembre de 2026.</p>
     </header>
     <div class="hotels">
-      <article class="hotel reveal">
-        <figure><img src="img/hotel-1.webp" alt="Alberca del Hotel Casa Montejo" loading="lazy"><span class="hotel__badge">Sede oficial</span></figure>
+      <article class="hotel hotel--featured reveal">
         <div class="hotel__body">
+          <span class="hotel__badge">Sede oficial</span>
           <h3>Hotel Casa Montejo</h3>
           <p class="stars" aria-label="5 estrellas">★★★★★</p>
           <p>Sobre Paseo de Montejo, a 5 min de la iglesia. Desayuno incluido y transporte a la hacienda.</p>
@@ -444,8 +445,7 @@
           <a class="btn btn--line btn--sm" href="#" data-demo>Reservar</a>
         </div>
       </article>
-      <article class="hotel reveal">
-        <figure><img src="img/hotel-2.webp" alt="Patio de la Casona del Henequén" loading="lazy"></figure>
+      <article class="hotel hotel--featured reveal">
         <div class="hotel__body">
           <h3>Casona del Henequén</h3>
           <p class="stars" aria-label="4 estrellas">★★★★</p>
@@ -454,8 +454,7 @@
           <a class="btn btn--line btn--sm" href="#" data-demo>Reservar</a>
         </div>
       </article>
-      <article class="hotel reveal">
-        <figure><img src="img/hotel-3.webp" alt="Salón del Hotel Plaza Norte" loading="lazy"></figure>
+      <article class="hotel hotel--featured reveal">
         <div class="hotel__body">
           <h3>Hotel Plaza Norte</h3>
           <p class="stars" aria-label="4 estrellas">★★★★</p>
@@ -513,6 +512,12 @@
   <div class="container narrow center reveal">
     <p class="eyebrow">Comparte tus fotos</p>
     <h2 class="hashtag__tag">#DarianayErick2027</h2>
+    <div class="strip">
+      <img src="img/mini-perrito.webp" alt="Dariana y Erick con su perrito" loading="lazy">
+      <img src="img/mini-propuesta.webp" alt="La pedida de mano" loading="lazy">
+      <img src="img/mini-abrazo.webp" alt="Abrazo después del sí" loading="lazy">
+      <img src="img/mini-trio.webp" alt="Serenata con trío" loading="lazy">
+    </div>
     <p>Usa nuestro hashtag en Instagram y TikTok. Después de la boda subiremos aquí la galería oficial y todas las fotos que nos compartan.</p>
     <div class="hero__actions">
       <button class="btn btn--dark" data-copy-text="#DarianayErick2027">Copiar hashtag</button>
@@ -676,6 +681,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/app.js?v=2" defer></script>
+<script src="js/app.js?v=3" defer></script>
 </body>
 </html>

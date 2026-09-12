@@ -296,7 +296,7 @@ p { margin: 0 0 1em; }
 /* ---------- Regalos ---------- */
 .gifts { color: #fff; overflow: hidden; }
 .gifts__bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.gifts__bg::after { content: ""; position: absolute; inset: 0; background: rgba(59, 45, 59, .8); }
+.gifts__bg::after { content: ""; position: absolute; inset: 0; background: rgba(59, 45, 59, .68); }
 .gifts .container { position: relative; }
 .gifts .eyebrow { color: var(--warm-soft); }
 .gifts .section__sub { color: rgba(255,255,255,.8); }
@@ -319,10 +319,7 @@ p { margin: 0 0 1em; }
 .code { font-weight: 500; color: var(--deep); background: var(--paper); padding: 2px 10px; border-radius: 4px; letter-spacing: .08em; }
 .hotels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .hotel { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
-.hotel figure { margin: 0; aspect-ratio: 4 / 3; position: relative; overflow: hidden; }
-.hotel figure img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
-.hotel:hover figure img { transform: scale(1.05); }
-.hotel__badge { position: absolute; top: 14px; left: 14px; background: var(--warm); color: #fff; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; padding: 5px 12px; border-radius: 99px; }
+.hotel__badge { background: var(--warm); color: #fff; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; padding: 5px 12px; border-radius: 99px; }
 .hotel__body { padding: 26px; display: flex; flex-direction: column; flex: 1; align-items: flex-start; }
 .hotel h3 { font-size: 28px; color: var(--deep); }
 .stars { color: var(--warm); letter-spacing: .15em; font-size: 14px; margin: 2px 0 10px; }
@@ -503,7 +500,7 @@ p { margin: 0 0 1em; }
   .hero { grid-template-columns: minmax(440px, 42%) 1fr; place-items: stretch; background: var(--deep); }
   .hero__bg, .hero__shade { left: 42%; width: auto; }
   .hero__bg { overflow: hidden; }
-  .hero__bg img { object-position: 50% 45%; }
+  .hero__bg img { object-position: 50% 42%; }
   .hero__shade { background: linear-gradient(90deg, rgba(59,45,59,.55) 0%, rgba(59,45,59,0) 28%), linear-gradient(0deg, rgba(40,26,40,.25), transparent 30%); }
   .hero__content {
     grid-column: 1; align-self: center; padding: 120px clamp(28px, 3.5vw, 56px) 90px;
@@ -532,3 +529,16 @@ p { margin: 0 0 1em; }
   .hero__actions { margin-top: 18px; gap: 8px; }
   .hero__actions .btn { padding: 12px 18px; font-size: 11.5px; }
 }
+
+/* ---------- Fotos reales en todas las secciones ---------- */
+.portrait { width: min(300px, 70vw); aspect-ratio: 4 / 5; margin: 0 auto 36px; border-radius: 999px 999px 6px 6px; overflow: hidden; box-shadow: var(--shadow); outline: 1px solid var(--warm-soft); outline-offset: 8px; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.event-card__img img { object-position: 50% 30%; }
+.hotel { border-top: 3px solid var(--accent-soft); }
+.hotel--featured { border-top-color: var(--warm); }
+.hotel__badge { position: static; display: inline-block; margin-bottom: 12px; }
+.hotel__body { padding-top: 30px; }
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 26px 0 30px; }
+.strip img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
+.strip img:nth-child(2) { object-position: 50% 70%; }
+@media (max-width: 760px) { .strip { grid-template-columns: 1fr 1fr; } }
