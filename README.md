@@ -3,7 +3,8 @@
 Sitio estático (HTML + CSS + JS, sin build) servido con nginx en Coolify quikia.
 
 - Producción: https://darianayerick.automatizeishon.com
-- Datos de ejemplo: nombres de padres/padrinos, lugares, hoteles, mesa de regalos, fotos (Unsplash).
+- Fotos reales de la pareja (img/foto-*, historia-*, hero*). Sede: Mérida, Yucatán (Iglesia de Santa Ana + Hacienda Xcanatún).
+- Datos de ejemplo: padres, padrinos, horarios, hoteles, mesa de regalos; fotos de ceremonia, recepción, menú y hoteles son de Unsplash.
 
 ## Invitación personalizada
 `https://darianayerick.automatizeishon.com/?invitado=Familia%20López&pases=4`
