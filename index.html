@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dariana &amp; Erick · 13 de febrero de 2027</title>
+  <meta name="description" content="Nos casamos. Acompáñanos el sábado 13 de febrero de 2027 en San Miguel de Allende, Guanajuato. Toda la información de nuestra boda: ceremonia, recepción, hospedaje, mesa de regalos y confirmación de asistencia.">
+  <meta name="theme-color" content="#2F3627">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dariana &amp; Erick · Nos casamos">
+  <meta property="og:description" content="Sábado 13 de febrero de 2027 · San Miguel de Allende, Gto. Confirma tu asistencia aquí.">
+  <meta property="og:image" content="https://darianayerick.automatizeishon.com/img/og.jpg">
+  <meta property="og:url" content="https://darianayerick.automatizeishon.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/hero.webp" media="(min-width: 761px)">
+  <link rel="preload" as="image" href="img/hero-movil.webp" media="(max-width: 760px)">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body class="is-locked">
+
+<!-- ============ SOBRE / INTRO ============ -->
+<div class="intro" id="intro" role="dialog" aria-label="Invitación">
+  <div class="intro__card">
+    <p class="intro__eyebrow">Tienes una invitación</p>
+    <p class="intro__guest" id="introGuest">Querida familia y amigos</p>
+    <button class="seal" id="openInvite" aria-label="Abrir invitación">
+      <span class="seal__mono">D<em>&amp;</em>E</span>
+    </button>
+    <p class="intro__hint">Toca el sello para abrir</p>
+    <p class="intro__date">13 · 02 · 2027</p>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#inicio" class="nav__brand" aria-label="Inicio">D<em>&amp;</em>E</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  <nav class="nav__links" id="navLinks">
+    <a href="#historia">Historia</a>
+    <a href="#evento">El gran día</a>
+    <a href="#itinerario">Itinerario</a>
+    <a href="#vestimenta">Vestimenta</a>
+    <a href="#regalos">Regalos</a>
+    <a href="#hospedaje">Hospedaje</a>
+    <a href="#galeria">Galería</a>
+    <a href="#faq">Preguntas</a>
+    <a href="#rsvp" class="nav__cta">Confirmar</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <picture class="hero__bg">
+    <source media="(max-width: 760px)" srcset="img/hero-movil.webp">
+    <img src="img/hero.webp" alt="Dariana y Erick abrazados al atardecer" fetchpriority="high">
+  </picture>
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Nos casamos</p>
+    <h1 class="hero__names">Dariana <span>&amp;</span> Erick</h1>
+    <p class="hero__date">Sábado 13 de febrero de 2027</p>
+    <p class="hero__place">San Miguel de Allende · Guanajuato</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div><strong data-cd="d">000</strong><span>días</span></div>
+      <div><strong data-cd="h">00</strong><span>horas</span></div>
+      <div><strong data-cd="m">00</strong><span>min</span></div>
+      <div><strong data-cd="s">00</strong><span>seg</span></div>
+    </div>
+    <div class="hero__actions">
+      <a href="#rsvp" class="btn btn--light">Confirmar asistencia</a>
+      <a href="#evento" class="btn btn--ghost">Ver detalles</a>
+    </div>
+  </div>
+  <a href="#invitacion" class="hero__scroll" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ============ INVITACIÓN ============ -->
+<section class="section invitation" id="invitacion">
+  <div class="container narrow center reveal">
+    <p class="guest-banner" id="guestBanner" hidden></p>
+    <p class="script">Con la bendición de Dios</p>
+    <p class="lead">y el amor de nuestros padres</p>
+    <div class="parents">
+      <div>
+        <h3>Padres de la novia</h3>
+        <p>Sr. Jorge Alberto Méndez Ruiz</p>
+        <p>Sra. Claudia Patricia Salinas de Méndez</p>
+      </div>
+      <div class="parents__divider" aria-hidden="true">✦</div>
+      <div>
+        <h3>Padres del novio</h3>
+        <p>Sr. Ricardo Navarro Torres</p>
+        <p>Sra. Mónica Elizabeth Garza de Navarro</p>
+      </div>
+    </div>
+    <p class="invitation__text">
+      Tenemos el honor de invitarte a celebrar el día en que uniremos nuestras vidas en matrimonio.
+      Después de ocho años de risas, viajes y sueños compartidos, queremos decir "sí, acepto" rodeados
+      de las personas que más queremos. Tu presencia hará este día todavía más especial.
+    </p>
+    <p class="signature">Dariana Méndez Salinas <span>&amp;</span> Erick Navarro Garza</p>
+    <div class="quote">
+      <p>"El amor es paciente, es bondadoso. Todo lo excusa, todo lo cree, todo lo espera, todo lo soporta."</p>
+      <cite>1 Corintios 13, 4-7</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTORIA ============ -->
+<section class="section story" id="historia">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Capítulo por capítulo</p>
+      <h2>Nuestra historia</h2>
+      <p class="section__sub">De un café en la universidad a un altar en San Miguel.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <figure><img src="img/historia-1.webp" alt="Brindis entre amigos" loading="lazy"></figure>
+        <div class="timeline__body">
+          <span class="timeline__date">Septiembre 2018</span>
+          <h3>Nos conocimos</h3>
+          <p>Fue en la fiesta de cumpleaños de Sofía, la mejor amiga de Dariana. Erick llegó tarde, derramó un vaso de agua de jamaica sobre ella y pasó el resto de la noche disculpándose. Terminaron platicando hasta las 3 de la mañana.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <figure><img src="img/historia-2.webp" alt="Caminando juntos en el campo" loading="lazy"></figure>
+        <div class="timeline__body">
+          <span class="timeline__date">Octubre 2018</span>
+          <h3>Nuestra primera cita</h3>
+          <p>Un café en el centro que se convirtió en comida, luego en caminata y después en cena. Erick todavía jura que fue una sola cita "muy larga". Dariana dice que fueron tres.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <figure><img src="img/historia-3.webp" alt="Pareja bajo las palmeras" loading="lazy"></figure>
+        <div class="timeline__body">
+          <span class="timeline__date">Diciembre 2021</span>
+          <h3>El primer gran viaje</h3>
+          <p>Mochila al hombro recorrimos Oaxaca, Chiapas y Yucatán durante 21 días. Aprendimos que viajamos igual de bien que discutimos por el mapa, y que siempre encontramos el camino de regreso.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <figure><img src="img/historia-4.webp" alt="Pareja sonriendo con flores secas" loading="lazy"></figure>
+        <div class="timeline__body">
+          <span class="timeline__date">Marzo 2023</span>
+          <h3>Un hogar (y un perro)</h3>
+          <p>Nos mudamos juntos a un departamento pequeño con mucha luz. Dos semanas después adoptamos a Canelo, un criollo color miel que hoy es el verdadero jefe de la casa.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <figure><img src="img/historia-5.webp" alt="Anillos de compromiso" loading="lazy"></figure>
+        <div class="timeline__body">
+          <span class="timeline__date">14 de febrero 2026</span>
+          <h3>¡Dijo que sí!</h3>
+          <p>En el mirador de San Miguel de Allende, al atardecer y con Canelo cargando el anillo en su collar, Erick se arrodilló. Dariana dijo que sí antes de que terminara la pregunta. Por eso elegimos casarnos aquí, justo un año después.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ EL GRAN DÍA ============ -->
+<section class="section event" id="evento">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Sábado 13 · Febrero · 2027</p>
+      <h2>El gran día</h2>
+      <p class="section__sub">Ceremonia y recepción están a 15 minutos una de la otra. Habrá transporte para ti.</p>
+    </header>
+
+    <div class="event__grid">
+      <article class="event-card reveal">
+        <figure class="event-card__img"><img src="img/ceremonia.webp" alt="Pasillo de ceremonia decorado con flores" loading="lazy"></figure>
+        <div class="event-card__body">
+          <span class="event-card__tag">Ceremonia religiosa</span>
+          <h3>Parroquia de San Miguel Arcángel</h3>
+          <p class="event-card__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 5:00 p.m. <small>(te sugerimos llegar 4:30 p.m.)</small></p>
+          <p class="event-card__addr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Principal s/n, Zona Centro, 37700 San Miguel de Allende, Gto.</p>
+          <p class="event-card__note">Oficia: Pbro. Luis Fernando Ávila. Ceremonia de aproximadamente 60 minutos.</p>
+          <div class="event-card__actions">
+            <a class="btn btn--dark btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Parroquia+de+San+Miguel+Arcangel+San+Miguel+de+Allende">Cómo llegar</a>
+            <a class="btn btn--line btn--sm" target="_blank" rel="noopener" href="https://waze.com/ul?q=Parroquia%20de%20San%20Miguel%20Arcangel%20San%20Miguel%20de%20Allende&navigate=yes">Waze</a>
+            <button class="btn btn--line btn--sm" data-map="ceremonia">Ver mapa</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <figure class="event-card__img"><img src="img/recepcion.webp" alt="Salón de recepción iluminado con candiles" loading="lazy"></figure>
+        <div class="event-card__body">
+          <span class="event-card__tag">Recepción</span>
+          <h3>Hacienda Los Laureles</h3>
+          <p class="event-card__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 7:00 p.m. a 3:00 a.m.</p>
+          <p class="event-card__addr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Carretera San Miguel a Dolores Hidalgo km 4.5, 37886 San Miguel de Allende, Gto.</p>
+          <p class="event-card__note">Jardín al aire libre con carpa climatizada. Estacionamiento sin costo con valet.</p>
+          <div class="event-card__actions">
+            <a class="btn btn--dark btn--sm" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=21.0000,-100.7280">Cómo llegar</a>
+            <a class="btn btn--line btn--sm" target="_blank" rel="noopener" href="https://waze.com/ul?ll=21.0000,-100.7280&navigate=yes">Waze</a>
+            <button class="btn btn--line btn--sm" data-map="recepcion">Ver mapa</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="map-panel reveal" id="mapPanel">
+      <div class="map-panel__tabs" role="tablist">
+        <button role="tab" class="is-active" data-map="ceremonia">Ceremonia</button>
+        <button role="tab" data-map="recepcion">Recepción</button>
+      </div>
+      <div class="map-panel__frame">
+        <iframe id="mapFrame" title="Mapa de la ceremonia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Parroquia%20de%20San%20Miguel%20Arcangel%2C%20San%20Miguel%20de%20Allende&z=16&output=embed"></iframe>
+      </div>
+    </div>
+
+    <div class="calendar-cta reveal">
+      <p>¿Lo agendas de una vez?</p>
+      <div>
+        <a class="btn btn--dark" id="gcalLink" target="_blank" rel="noopener" href="#">Google Calendar</a>
+        <button class="btn btn--line" id="icsBtn">Apple / Outlook (.ics)</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ITINERARIO ============ -->
+<section class="section itinerary" id="itinerario">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Paso a paso</p>
+      <h2>Itinerario</h2>
+      <p class="section__sub">Horarios aproximados para que no te pierdas ningún momento.</p>
+    </header>
+    <ul class="schedule">
+      <li class="reveal"><time>4:00 p.m.</time><div><h4>Salida de transporte</h4><p>Camionetas desde Hotel Casa Olivo y Posada del Jardín hacia la parroquia.</p></div></li>
+      <li class="reveal"><time>5:00 p.m.</time><div><h4>Ceremonia religiosa</h4><p>Parroquia de San Miguel Arcángel. Ceremonia "desconectada": te pedimos guardar el celular.</p></div></li>
+      <li class="reveal"><time>6:00 p.m.</time><div><h4>Callejoneada</h4><p>Recorrido con mojiganga y banda por el centro histórico. Trae zapatos cómodos o pide tus pantuflas en la entrada.</p></div></li>
+      <li class="reveal"><time>7:00 p.m.</time><div><h4>Cóctel de bienvenida</h4><p>Mezcal, vino y canapés en el jardín de la hacienda con trío en vivo.</p></div></li>
+      <li class="reveal"><time>8:15 p.m.</time><div><h4>Entrada de los novios</h4><p>Presentación de Dariana y Erick como esposos y brindis de los padres.</p></div></li>
+      <li class="reveal"><time>8:45 p.m.</time><div><h4>Cena de tres tiempos</h4><p>Menú de temporada preparado por el chef Andrés Villalobos.</p></div></li>
+      <li class="reveal"><time>10:00 p.m.</time><div><h4>Primer baile y vals</h4><p>Seguido del baile con papás y la apertura de la pista.</p></div></li>
+      <li class="reveal"><time>10:30 p.m.</time><div><h4>¡A bailar!</h4><p>DJ Marcos Beltrán y hora loca a las 12:00 a.m.</p></div></li>
+      <li class="reveal"><time>1:30 a.m.</time><div><h4>Tornaboda</h4><p>Chilaquiles, tacos al pastor y café de olla para recargar energía.</p></div></li>
+      <li class="reveal"><time>3:00 a.m.</time><div><h4>Fin de la celebración</h4><p>Transporte de regreso a hoteles a la 1:00 a.m. y a las 3:15 a.m.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MENÚ ============ -->
+<section class="section menu" id="menu">
+  <div class="container split">
+    <figure class="split__img reveal"><img src="img/menu.webp" alt="Platillo servido en la cena" loading="lazy"></figure>
+    <div class="split__body reveal">
+      <p class="eyebrow">A la mesa</p>
+      <h2>Menú</h2>
+      <div class="menu__course">
+        <h4>Primer tiempo</h4>
+        <p>Crema de elote con huitlacoche y aceite de epazote</p>
+      </div>
+      <div class="menu__course">
+        <h4>Segundo tiempo</h4>
+        <p>Ensalada de betabel rostizado, queso de cabra, nuez caramelizada y vinagreta de miel de agave</p>
+      </div>
+      <div class="menu__course">
+        <h4>Plato fuerte</h4>
+        <p>Filete de res en salsa de chile pasilla con puré de camote y espárragos</p>
+        <p class="menu__alt">Opción vegetariana: risotto de hongos silvestres con trufa negra</p>
+      </div>
+      <div class="menu__course">
+        <h4>Postre</h4>
+        <p>Pastel de bodas de vainilla y frutos rojos, más mesa de dulces mexicanos</p>
+      </div>
+      <p class="menu__note">¿Alergias o dieta especial? Indícalo al confirmar tu asistencia y lo resolvemos con el chef.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VESTIMENTA ============ -->
+<section class="section dress" id="vestimenta">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Código de vestimenta</p>
+      <h2>Formal</h2>
+      <p class="section__sub">Queremos que te sientas elegante y cómodo(a) toda la noche.</p>
+    </header>
+    <div class="dress__grid">
+      <div class="dress-card reveal">
+        <div class="dress-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M17 6l7 6 7-6 6 6-5 5v25H16V17l-5-5z"/><path d="M24 12v8l-3 4 3 3 3-3-3-4"/></svg>
+        </div>
+        <h3>Ellos</h3>
+        <p>Traje completo en tonos oscuros (azul marino, gris Oxford o negro) con corbata o moño.</p>
+      </div>
+      <div class="dress-card reveal">
+        <div class="dress-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M19 5h10l-2 9 4 4-3 4 10 21H10l10-21-3-4 4-4z"/></svg>
+        </div>
+        <h3>Ellas</h3>
+        <p>Vestido largo o de coctel elegante. Te recomendamos tacón ancho: la recepción es en jardín.</p>
+      </div>
+      <div class="dress-card reveal">
+        <div class="dress-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></svg>
+        </div>
+        <h3>El clima</h3>
+        <p>En febrero San Miguel tiene días de 24 °C y noches de hasta 6 °C. Trae un saco, chal o abrigo ligero.</p>
+      </div>
+    </div>
+
+    <div class="palette reveal">
+      <div>
+        <h4>Colores sugeridos</h4>
+        <ul class="swatches">
+          <li style="--c:#6E7F5F"><span></span>Verde olivo</li>
+          <li style="--c:#B8965A"><span></span>Dorado</li>
+          <li style="--c:#8C5A4A"><span></span>Terracota</li>
+          <li style="--c:#3E4A5C"><span></span>Azul pizarra</li>
+          <li style="--c:#C9A29A"><span></span>Rosa palo</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reservados</h4>
+        <ul class="swatches swatches--no">
+          <li style="--c:#FFFFFF"><span></span>Blanco</li>
+          <li style="--c:#F1E9D8"><span></span>Marfil</li>
+          <li style="--c:#A9B59A"><span></span>Verde salvia <small>(damas)</small></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORTEJO ============ -->
+<section class="section party" id="cortejo">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Quienes nos acompañan</p>
+      <h2>Padrinos y cortejo</h2>
+    </header>
+    <div class="godparents reveal">
+      <div class="godparent"><span class="godparent__role">Velación</span><p>Arturo Méndez &amp; Laura Salinas</p></div>
+      <div class="godparent"><span class="godparent__role">Anillos</span><p>Fernando Garza &amp; Paulina Ortiz</p></div>
+      <div class="godparent"><span class="godparent__role">Arras</span><p>Héctor Navarro &amp; Silvia Treviño</p></div>
+      <div class="godparent"><span class="godparent__role">Lazo</span><p>Roberto Cantú &amp; Adriana Méndez</p></div>
+      <div class="godparent"><span class="godparent__role">Biblia y rosario</span><p>Javier Lozano &amp; Gabriela Ríos</p></div>
+      <div class="godparent"><span class="godparent__role">Cojines</span><p>Diego Salinas &amp; Renata Villarreal</p></div>
+    </div>
+
+    <div class="court reveal">
+      <div>
+        <h3>Damas de honor</h3>
+        <ul>
+          <li><span class="avatar">SR</span><div><strong>Sofía Rangel</strong><small>Dama principal · Mejor amiga</small></div></li>
+          <li><span class="avatar">VM</span><div><strong>Valeria Méndez</strong><small>Hermana de la novia</small></div></li>
+          <li><span class="avatar">AN</span><div><strong>Ana Lucía Navarro</strong><small>Hermana del novio</small></div></li>
+          <li><span class="avatar">CE</span><div><strong>Camila Estrada</strong><small>Amiga de la universidad</small></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Caballeros de honor</h3>
+        <ul>
+          <li><span class="avatar">RN</span><div><strong>Rafael Navarro</strong><small>Padrino principal · Primo del novio</small></div></li>
+          <li><span class="avatar">SN</span><div><strong>Santiago Navarro</strong><small>Hermano del novio</small></div></li>
+          <li><span class="avatar">EM</span><div><strong>Emilio Méndez</strong><small>Hermano de la novia</small></div></li>
+          <li><span class="avatar">PG</span><div><strong>Pablo Guerra</strong><small>Amigo de toda la vida</small></div></li>
+        </ul>
+      </div>
+    </div>
+    <p class="party__pet reveal">Y el encargado de los anillos: <strong>Canelo</strong> 🐾</p>
+  </div>
+</section>
+
+<!-- ============ REGALOS ============ -->
+<section class="section gifts" id="regalos">
+  <div class="gifts__bg" style="background-image:url('img/regalos.webp')"></div>
+  <div class="container">
+    <header class="section__head section__head--light reveal">
+      <p class="eyebrow">Mesa de regalos</p>
+      <h2>Tu presencia es nuestro mejor regalo</h2>
+      <p class="section__sub">Si además deseas tener un detalle con nosotros, te dejamos algunas opciones.</p>
+    </header>
+    <div class="gifts__grid">
+      <article class="gift-card reveal">
+        <span class="gift-card__logo">Liverpool</span>
+        <p>Número de evento</p>
+        <p class="gift-card__code">51 234 567</p>
+        <a class="btn btn--dark btn--sm" href="https://mesaderegalos.liverpool.com.mx/" target="_blank" rel="noopener">Ver mesa</a>
+      </article>
+      <article class="gift-card reveal">
+        <span class="gift-card__logo">Amazon</span>
+        <p>Lista de bodas</p>
+        <p class="gift-card__code">Dariana y Erick</p>
+        <a class="btn btn--dark btn--sm" href="https://www.amazon.com.mx/wedding" target="_blank" rel="noopener">Ver lista</a>
+      </article>
+      <article class="gift-card reveal">
+        <span class="gift-card__logo">Lluvia de sobres</span>
+        <p>Durante la recepción habrá un buzón junto a la mesa de firmas.</p>
+        <p class="gift-card__code">💌</p>
+      </article>
+      <article class="gift-card reveal">
+        <span class="gift-card__logo">Transferencia</span>
+        <p>Para nuestra luna de miel en Japón</p>
+        <dl class="bank">
+          <dt>Banco</dt><dd>BBVA México</dd>
+          <dt>Titular</dt><dd>Dariana Méndez Salinas</dd>
+          <dt>CLABE</dt><dd><span id="clabe">0121 8000 0000 0000 00</span></dd>
+        </dl>
+        <button class="btn btn--dark btn--sm" data-copy="clabe">Copiar CLABE</button>
+        <small class="demo-note">Datos de ejemplo</small>
+      </article>
+    </div>
+    <div class="honeymoon reveal">
+      <p class="eyebrow">Fondo luna de miel</p>
+      <div class="honeymoon__bar"><span style="width:62%"></span></div>
+      <p><strong>62%</strong> de nuestra meta para recorrer Tokio, Kioto y Osaka. ¡Gracias!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOSPEDAJE ============ -->
+<section class="section stay" id="hospedaje">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Si vienes de fuera</p>
+      <h2>Hospedaje</h2>
+      <p class="section__sub">Tenemos tarifa preferencial en estos hoteles con el código <strong class="code">BODADYE27</strong>. Reserva antes del 15 de diciembre de 2026.</p>
+    </header>
+    <div class="hotels">
+      <article class="hotel reveal">
+        <figure><img src="img/hotel-1.webp" alt="Alberca del Hotel Casa Olivo" loading="lazy"><span class="hotel__badge">Sede oficial</span></figure>
+        <div class="hotel__body">
+          <h3>Hotel Casa Olivo</h3>
+          <p class="stars" aria-label="5 estrellas">★★★★★</p>
+          <p>A 5 min de la parroquia. Desayuno incluido y transporte a la recepción.</p>
+          <ul class="hotel__meta"><li>Desde <strong>$3,450</strong> MXN/noche</li><li>Tel. 415 000 1234</li></ul>
+          <a class="btn btn--line btn--sm" href="#" data-demo>Reservar</a>
+        </div>
+      </article>
+      <article class="hotel reveal">
+        <figure><img src="img/hotel-2.webp" alt="Habitación de la Posada del Jardín" loading="lazy"></figure>
+        <div class="hotel__body">
+          <h3>Posada del Jardín</h3>
+          <p class="stars" aria-label="4 estrellas">★★★★</p>
+          <p>Casona boutique en el centro, a pie de la callejoneada. Transporte incluido.</p>
+          <ul class="hotel__meta"><li>Desde <strong>$2,100</strong> MXN/noche</li><li>Tel. 415 000 5678</li></ul>
+          <a class="btn btn--line btn--sm" href="#" data-demo>Reservar</a>
+        </div>
+      </article>
+      <article class="hotel reveal">
+        <figure><img src="img/hotel-3.webp" alt="Salón del Hotel Real de Minas" loading="lazy"></figure>
+        <div class="hotel__body">
+          <h3>Hotel Real de Minas</h3>
+          <p class="stars" aria-label="4 estrellas">★★★★</p>
+          <p>Opción amplia para familias, con estacionamiento y alberca climatizada.</p>
+          <ul class="hotel__meta"><li>Desde <strong>$1,650</strong> MXN/noche</li><li>Tel. 415 000 9012</li></ul>
+          <a class="btn btn--line btn--sm" href="#" data-demo>Reservar</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="travel reveal">
+      <div class="travel__item">
+        <h4>✈️ En avión</h4>
+        <p><strong>Aeropuerto de Querétaro (QRO):</strong> 1 h 10 min en auto.<br><strong>Aeropuerto del Bajío, León (BJX):</strong> 1 h 30 min en auto.</p>
+      </div>
+      <div class="travel__item">
+        <h4>🚗 En auto</h4>
+        <p><strong>Desde CDMX:</strong> 3 h 30 min por la 57D.<br><strong>Desde Guadalajara:</strong> 4 h 30 min.<br><strong>Desde Monterrey:</strong> 7 h 30 min.</p>
+      </div>
+      <div class="travel__item">
+        <h4>🚐 Transporte</h4>
+        <p>Camionetas gratuitas entre hoteles sede, parroquia y hacienda. Regresos a la 1:00 a.m. y 3:15 a.m.</p>
+      </div>
+    </div>
+
+    <div class="explore reveal">
+      <h3>¿Te quedas el fin de semana? Qué hacer en San Miguel</h3>
+      <div class="explore__grid">
+        <div><strong>Viernes 12</strong><p>Cena de bienvenida informal en La Azotea de los novios, 8:00 p.m. (todos invitados).</p></div>
+        <div><strong>Jardín Principal</strong><p>El corazón del pueblo, con la parroquia rosa de fondo. Ideal para fotos al atardecer.</p></div>
+        <div><strong>Fábrica La Aurora</strong><p>Antigua fábrica textil convertida en galerías de arte y diseño.</p></div>
+        <div><strong>Cañada de la Virgen</strong><p>Zona arqueológica otomí a 30 minutos, perfecta para la mañana del domingo.</p></div>
+        <div><strong>Viñedos</strong><p>Tours con cata en los viñedos de la región, a 20 minutos del centro.</p></div>
+        <div><strong>Domingo 14</strong><p>Brunch de despedida en Hotel Casa Olivo, 11:00 a.m. Ven en pijama si quieres.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section gallery" id="galeria">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Nuestra sesión de compromiso</p>
+      <h2>Galería</h2>
+    </header>
+    <div class="masonry" id="masonry">
+      <!-- generado en js/app.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ HASHTAG ============ -->
+<section class="section hashtag">
+  <div class="container narrow center reveal">
+    <p class="eyebrow">Comparte tus fotos</p>
+    <h2 class="hashtag__tag">#DarianayErick2027</h2>
+    <p>Usa nuestro hashtag en Instagram y TikTok. Después de la boda subiremos aquí la galería oficial y todas las fotos que nos compartan.</p>
+    <div class="hero__actions">
+      <button class="btn btn--dark" data-copy-text="#DarianayErick2027">Copiar hashtag</button>
+      <a class="btn btn--line" href="#" data-demo>Subir mis fotos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RSVP ============ -->
+<section class="section rsvp" id="rsvp">
+  <div class="rsvp__bg" style="background-image:url('img/rsvp.webp')"></div>
+  <div class="container narrow">
+    <div class="rsvp__card reveal">
+      <header class="section__head">
+        <p class="eyebrow">R.S.V.P.</p>
+        <h2>Confirma tu asistencia</h2>
+        <p class="section__sub">Por favor responde antes del <strong>10 de enero de 2027</strong>.</p>
+        <p class="rsvp__passes" id="passesInfo">Hemos reservado <strong>2</strong> lugares en tu honor.</p>
+      </header>
+
+      <form class="form" id="rsvpForm" novalidate>
+        <div class="form__row">
+          <label class="field">
+            <span>Nombre completo *</span>
+            <input type="text" name="nombre" id="rsvpName" required autocomplete="name" placeholder="Ej. Familia Rodríguez">
+          </label>
+          <label class="field">
+            <span>Teléfono / WhatsApp</span>
+            <input type="tel" name="telefono" autocomplete="tel" placeholder="10 dígitos">
+          </label>
+        </div>
+
+        <fieldset class="field">
+          <legend>¿Nos acompañas? *</legend>
+          <div class="choice">
+            <label><input type="radio" name="asistencia" value="si" required> <span>¡Ahí estaré!</span></label>
+            <label><input type="radio" name="asistencia" value="no"> <span>No podré asistir</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form__attend" id="attendFields">
+          <div class="form__row">
+            <label class="field">
+              <span>Número de asistentes</span>
+              <select name="asistentes" id="guestCount"></select>
+            </label>
+            <label class="field">
+              <span>Menú</span>
+              <select name="menu">
+                <option>Filete de res</option>
+                <option>Vegetariano</option>
+                <option>Mixto (lo indico abajo)</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="field">
+            <legend>¿Usarás el transporte?</legend>
+            <div class="choice">
+              <label><input type="radio" name="transporte" value="si"> <span>Sí, por favor</span></label>
+              <label><input type="radio" name="transporte" value="no" checked> <span>Llego por mi cuenta</span></label>
+            </div>
+          </fieldset>
+          <label class="field">
+            <span>Alergias o restricciones alimentarias</span>
+            <input type="text" name="alergias" placeholder="Ej. sin gluten, alergia a nueces">
+          </label>
+          <label class="field">
+            <span>Una canción que no puede faltar 🎶</span>
+            <input type="text" name="cancion" placeholder="Ej. Bailando · Enrique Iglesias">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Mensaje para los novios</span>
+          <textarea name="mensaje" rows="3" placeholder="Escríbenos algo bonito"></textarea>
+        </label>
+
+        <p class="form__error" id="formError" hidden></p>
+        <button type="submit" class="btn btn--dark btn--block">Enviar confirmación</button>
+      </form>
+
+      <div class="rsvp__done" id="rsvpDone" hidden>
+        <div class="rsvp__check" aria-hidden="true">✓</div>
+        <h3 id="doneTitle">¡Gracias!</h3>
+        <p id="doneText"></p>
+        <a class="btn btn--dark" id="waLink" target="_blank" rel="noopener" href="#">Avisar también por WhatsApp</a>
+        <button class="btn btn--line" id="rsvpEdit">Modificar respuesta</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUENOS DESEOS ============ -->
+<section class="section wishes" id="deseos">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Libro de firmas</p>
+      <h2>Buenos deseos</h2>
+      <p class="section__sub">Déjanos unas palabras. Las leeremos juntos en nuestro primer aniversario.</p>
+    </header>
+    <form class="wish-form reveal" id="wishForm">
+      <input type="text" name="autor" placeholder="Tu nombre" required maxlength="40">
+      <input type="text" name="texto" placeholder="Tu mensaje para Dariana y Erick" required maxlength="220">
+      <button type="submit" class="btn btn--dark">Publicar</button>
+    </form>
+    <div class="wishes__wall" id="wishWall"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container narrow">
+    <header class="section__head reveal">
+      <p class="eyebrow">Resolvemos tus dudas</p>
+      <h2>Preguntas frecuentes</h2>
+    </header>
+    <div class="accordion reveal">
+      <details><summary>¿Puedo llevar a mis hijos?</summary><p>Queremos que los papás disfruten la noche, por eso la recepción es solo para adultos (a partir de 15 años). Los niños del cortejo sí están invitados. Si necesitas niñera en el hotel, escríbenos y te pasamos contactos de confianza.</p></details>
+      <details><summary>¿Puedo llevar acompañante?</summary><p>Los lugares están asignados por invitación. En la parte de arriba de este sitio verás cuántos pases tienes reservados. Si tienes dudas, contáctanos directamente.</p></details>
+      <details><summary>¿Hasta cuándo puedo confirmar?</summary><p>Tienes hasta el <strong>10 de enero de 2027</strong>. Después de esa fecha necesitamos cerrar la lista con la hacienda.</p></details>
+      <details><summary>¿Puedo tomar fotos durante la ceremonia?</summary><p>Tendremos una ceremonia desconectada: te pedimos no usar celular dentro de la parroquia. Nuestro fotógrafo capturará todo y compartiremos las fotos contigo. En la recepción, ¡toma todas las que quieras!</p></details>
+      <details><summary>¿Hay estacionamiento?</summary><p>Sí. La hacienda tiene estacionamiento gratuito con valet. En el centro es complicado estacionarse, por eso te recomendamos usar el transporte desde los hoteles sede.</p></details>
+      <details><summary>¿Qué pasa si llueve?</summary><p>Febrero es temporada seca, pero la recepción tendrá una carpa transparente climatizada. No hay forma de que el clima arruine la fiesta.</p></details>
+      <details><summary>¿A qué hora termina la fiesta?</summary><p>La música se apaga a las 3:00 a.m. Habrá tornaboda a la 1:30 a.m. y transporte de regreso a las 1:00 y 3:15 a.m.</p></details>
+      <details><summary>¿Cómo puedo contactar a los novios o a la coordinación?</summary><p>Para cualquier duda del evento escribe a nuestra coordinadora, <strong>Mariana López</strong>, al WhatsApp 415 000 4321 (lunes a sábado, 10:00 a 19:00 h).</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="closing">
+  <div class="closing__bg" style="background-image:url('img/fiesta.webp')"></div>
+  <div class="closing__content reveal">
+    <p class="script">¡Te esperamos!</p>
+    <p class="closing__names">Dariana &amp; Erick</p>
+    <p class="closing__date">13 · 02 · 2027</p>
+    <a href="#rsvp" class="btn btn--light">Confirmar asistencia</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__mono">D<em>&amp;</em>E</p>
+  <p>Hecho con mucho amor para nuestra familia y amigos · San Miguel de Allende, 2027</p>
+  <p class="footer__demo">Sitio de demostración: nombres, datos, lugares e imágenes son de ejemplo (fotos de Unsplash).</p>
+</footer>
+
+<a href="#rsvp" class="fab" id="fab">Confirmar</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" aria-label="Cerrar">×</button>
+  <button class="lightbox__nav lightbox__prev" aria-label="Anterior">‹</button>
+  <img alt="">
+  <button class="lightbox__nav lightbox__next" aria-label="Siguiente">›</button>
+  <p class="lightbox__count"></p>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/app.js?v=1" defer></script>
+</body>
+</html>
