@@ -11,12 +11,12 @@
     maxPases: 8,
     hashtag: "#DarianayErick2027",
     // Subir este número cada vez que se reemplace una foto con el mismo nombre
-    imgVersion: "3",
+    imgVersion: "4",
     storageRsvp: "dye27_rsvp",
     storageWishes: "dye27_wishes",
     mapas: {
       ceremonia: "https://maps.google.com/maps?q=Iglesia%20de%20Santa%20Ana%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n&z=16&output=embed",
-      recepcion: "https://maps.google.com/maps?q=Hacienda%20Xcanat%C3%BAn%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n&z=14&output=embed"
+      recepcion: "https://maps.google.com/maps?q=Hacienda%20Teya%2C%20Kanas%C3%ADn%2C%20Yucat%C3%A1n&z=14&output=embed"
     },
     galeria: [
       "foto-beso-manos", "foto-abrazo", "foto-propuesta", "foto-perrito",
@@ -178,7 +178,7 @@
   const toICSDate = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   const evTitle = "Boda de Dariana y Erick";
   const evPlace = "Iglesia de Santa Ana, Calle 60 x 45 y 47, Centro, Mérida, Yuc.";
-  const evDesc = "Ceremonia 5:00 p.m. en la Iglesia de Santa Ana. Recepción 6:45 p.m. en Hacienda Xcanatún. Info: https://darianayerick.automatizeishon.com";
+  const evDesc = "Ceremonia 5:00 p.m. en la Iglesia de Santa Ana. Recepción 6:45 p.m. en Hacienda Teya. Info: https://darianayerick.automatizeishon.com";
   $("#gcalLink").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
     "&text=" + encodeURIComponent(evTitle) +
     "&dates=" + toICSDate(CONFIG.fecha) + "/" + toICSDate(CONFIG.fin) +
