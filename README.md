@@ -22,3 +22,6 @@ Sitio estático (HTML + CSS + JS, sin build) servido con nginx en Coolify quikia
 
 ## Local
 `python -m http.server 8765` y abrir http://127.0.0.1:8765
+
+## Al reemplazar una foto
+Si cambias una imagen conservando el nombre, sube `?v=` en `index.html` y `imgVersion` en `js/app.js`; si no, los navegadores muestran la versión vieja en caché.

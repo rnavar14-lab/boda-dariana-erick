@@ -10,6 +10,8 @@
     pasesDefault: 2,
     maxPases: 8,
     hashtag: "#DarianayErick2027",
+    // Subir este número cada vez que se reemplace una foto con el mismo nombre
+    imgVersion: "3",
     storageRsvp: "dye27_rsvp",
     storageWishes: "dye27_wishes",
     mapas: {
@@ -236,7 +238,7 @@
     b.type = "button";
     b.setAttribute("aria-label", `Ver foto ${i + 1}`);
     b.className = `g-${i + 1}`;
-    b.innerHTML = `<img src="img/${name}.webp" alt="Dariana y Erick, foto ${i + 1}" loading="lazy">`;
+    b.innerHTML = `<img src="img/${name}.webp?v=${CONFIG.imgVersion}" alt="Dariana y Erick, foto ${i + 1}" loading="lazy">`;
     b.addEventListener("click", () => openLightbox(i));
     masonry.appendChild(b);
   });
@@ -246,7 +248,7 @@
   const lbCount = $(".lightbox__count", lb);
   let lbIndex = 0;
   function renderLightbox() {
-    lbImg.src = `img/${CONFIG.galeria[lbIndex]}.webp`;
+    lbImg.src = `img/${CONFIG.galeria[lbIndex]}.webp?v=${CONFIG.imgVersion}`;
     lbImg.alt = `Foto ${lbIndex + 1} de ${CONFIG.galeria.length}`;
     lbCount.textContent = `${lbIndex + 1} / ${CONFIG.galeria.length}`;
   }
