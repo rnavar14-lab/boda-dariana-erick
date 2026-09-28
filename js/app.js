@@ -4,32 +4,25 @@
 
   const CONFIG = {
     novios: "Dariana y Erick",
-    // Ceremonia 5:00 p.m. hora de Mérida (UTC-6, sin horario de verano)
-    fecha: new Date("2027-02-13T17:00:00-06:00"),
+    // Misa 3:00 p.m. hora de Mérida (UTC-6, sin horario de verano)
+    fecha: new Date("2027-02-13T15:00:00-06:00"),
     fin: new Date("2027-02-14T03:00:00-06:00"),
     pasesDefault: 2,
     maxPases: 8,
     hashtag: "#DarianayErick2027",
     // Subir este número cada vez que se reemplace una foto con el mismo nombre
-    imgVersion: "4",
+    imgVersion: "5",
     storageRsvp: "dye27_rsvp",
     storageWishes: "dye27_wishes",
     mapas: {
-      ceremonia: "https://maps.google.com/maps?q=Iglesia%20de%20Santa%20Ana%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n&z=16&output=embed",
-      recepcion: "https://maps.google.com/maps?q=Hacienda%20Teya%2C%20Kanas%C3%ADn%2C%20Yucat%C3%A1n&z=14&output=embed"
+      ceremonia: "https://maps.google.com/maps?q=Rector%C3%ADa%20El%20Jes%C3%BAs%20Tercera%20Orden%2C%20M%C3%A9rida&z=16&output=embed",
+      recepcion: "https://maps.google.com/maps?q=Hacienda%20Xuku%2C%20Sey%C3%A9%2C%20Yucat%C3%A1n&z=14&output=embed"
     },
     galeria: [
       "foto-beso-manos", "foto-abrazo", "foto-propuesta", "foto-perrito",
       "foto-beso-mejilla", "foto-trio", "foto-sillas"
     ],
-    deseosDemo: [
-      { autor: "Sofía Rangel", texto: "¡Desde aquella jamaica derramada supe que esto iba en serio! Los amo, que su vida juntos sea igual de divertida." },
-      { autor: "Tía Laura", texto: "Que Dios bendiga su hogar y nunca les falte paciencia, risas y café en la mañana." },
-      { autor: "Rafa Navarro", texto: "Primo, por fin alguien que te aguanta. Dariana, bienvenida oficialmente a la familia. ¡Nos vemos en la pista!" },
-      { autor: "Familia Garza Treviño", texto: "Qué alegría verlos cumplir este sueño. Ahí estaremos con todo y zapatos de baile." },
-      { autor: "Camila Estrada", texto: "Ocho años viéndolos crecer juntos. Son la prueba de que el amor bonito sí existe." },
-      { autor: "Pablo Guerra", texto: "Erick, recuerda: la esposa siempre tiene la razón. Y Bombón también. Felicidades, hermano." }
-    ]
+    deseosDemo: []
   };
 
   const $ = (s, el = document) => el.querySelector(s);
@@ -177,8 +170,8 @@
   /* ---------- Calendario ---------- */
   const toICSDate = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   const evTitle = "Boda de Dariana y Erick";
-  const evPlace = "Iglesia de Santa Ana, Calle 60 x 45 y 47, Centro, Mérida, Yuc.";
-  const evDesc = "Ceremonia 5:00 p.m. en la Iglesia de Santa Ana. Recepción 6:45 p.m. en Hacienda Teya. Info: https://darianayerick.automatizeishon.com";
+  const evPlace = "Rectoría El Jesús Tercera Orden, Calle 60 x 59-A, Centro, Mérida, Yuc.";
+  const evDesc = "Misa 3:00 p.m. en la Rectoría El Jesús Tercera Orden, Mérida. Recepción 6:45 p.m. en la Hacienda Xuku, Seyé. Info: https://darianayerick.com";
   $("#gcalLink").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
     "&text=" + encodeURIComponent(evTitle) +
     "&dates=" + toICSDate(CONFIG.fecha) + "/" + toICSDate(CONFIG.fin) +
@@ -188,7 +181,7 @@
     const ics = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//DarianayErick//Boda//ES", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
       "BEGIN:VEVENT",
-      "UID:boda-dariana-erick-20270213@darianayerick.automatizeishon.com",
+      "UID:boda-dariana-erick-20270213@darianayerick.com",
       "DTSTAMP:" + toICSDate(new Date()),
       "DTSTART:" + toICSDate(CONFIG.fecha),
       "DTEND:" + toICSDate(CONFIG.fin),
@@ -295,9 +288,10 @@
 
   function showDone(data) {
     const yes = data.asistencia === "si";
-    $("#doneTitle").textContent = yes ? `¡Gracias, ${data.nombre.split(" ")[0]}!` : "Gracias por avisarnos";
+    const corto = /^(familia|fam\.|sr\.|sra\.|srita\.)$/i.test(data.nombre.split(" ")[0]) ? data.nombre : data.nombre.split(" ")[0];
+    $("#doneTitle").textContent = yes ? `¡Gracias, ${corto}!` : "Gracias por avisarnos";
     $("#doneText").textContent = yes
-      ? `Confirmaste ${data.asistentes} ${Number(data.asistentes) === 1 ? "lugar" : "lugares"}. Nos vemos el 13 de febrero en Mérida.`
+      ? `Confirmaste ${data.asistentes} ${Number(data.asistentes) === 1 ? "lugar" : "lugares"}. Nos vemos el 13 de febrero.`
       : "Te vamos a extrañar. Gracias por tomarte el tiempo de responder, te mandamos un abrazo.";
     const msg = yes
       ? `Hola, soy ${data.nombre}. Confirmo mi asistencia a la boda de Dariana y Erick con ${data.asistentes} ${Number(data.asistentes) === 1 ? "persona" : "personas"}. ${CONFIG.hashtag}`
@@ -370,8 +364,11 @@
     art.append(p, f);
     return art;
   }
+  const wishEmpty = $("#wishEmpty");
   const userWishes = store.get(CONFIG.storageWishes, []);
   [...userWishes].reverse().concat(CONFIG.deseosDemo).forEach((w) => wall.appendChild(wishNode(w, false)));
+  function syncWishEmpty() { if (wishEmpty) wishEmpty.hidden = wall.children.length > 0; }
+  syncWishEmpty();
   wishForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const autor = wishForm.autor.value.trim();
@@ -381,6 +378,7 @@
     userWishes.push(w);
     store.set(CONFIG.storageWishes, userWishes);
     wall.prepend(wishNode(w, true));
+    syncWishEmpty();
     wishForm.reset();
     toast("¡Gracias por tus buenos deseos!");
   });
