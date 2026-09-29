@@ -216,7 +216,7 @@
   }
   $$("[data-copy]").forEach((b) => b.addEventListener("click", () => {
     const el = document.getElementById(b.dataset.copy);
-    copyText(el.textContent.replace(/\s/g, ""), "CLABE copiada");
+    copyText(el.textContent.replace(/\s/g, ""), "Número de cuenta copiado");
   }));
   $$("[data-copy-text]").forEach((b) => b.addEventListener("click", () => copyText(b.dataset.copyText, "Hashtag copiado")));
   $$("[data-demo]").forEach((a) => a.addEventListener("click", (e) => {

@@ -566,3 +566,11 @@ p { margin: 0 0 1em; }
 .wishes__vacio { text-align: center; font-family: var(--f-display); font-style: italic; font-size: 20px; color: var(--muted); margin-bottom: 28px; }
 .travel__item a { color: var(--accent); }
 @media (max-width: 760px) { .hotels--dos { grid-template-columns: 1fr; } }
+
+/* ---------- Tornaboda y contacto ---------- */
+.schedule li.tornaboda { margin-top: 18px; padding-top: 26px; border-top: 1px solid rgba(226,203,160,.35); }
+.schedule li.tornaboda time { font-size: 18px; line-height: 1.35; }
+.schedule a { color: var(--warm-soft); }
+.rsvp__contacto { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
+.rsvp__contacto a { color: var(--accent); }
+.gift-card .demo-note { color: var(--muted); line-height: 1.5; }

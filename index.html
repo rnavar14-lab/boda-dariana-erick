@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="img/hero.webp?v=5" media="(min-width: 761px)">
   <link rel="preload" as="image" href="img/hero-movil.webp?v=5" media="(max-width: 760px)">
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=13">
 </head>
 <body class="is-locked">
 
@@ -198,7 +198,7 @@
           <span class="event-card__tag">Recepción</span>
           <h3>Hacienda Xuku</h3>
           <p class="event-card__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 6:45 p.m. a 3:00 a.m.</p>
-          <p class="event-card__addr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Carretera Mérida-Seyé, Seyé, Yucatán. <span class="tbd">Dirección exacta por confirmar</span></p>
+          <p class="event-card__addr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Carretera Mérida-Seyé, Seyé, Yucatán.</p>
           <p class="event-card__note">Cóctel en el jardín y cena bajo las estrellas. Algunos espacios tienen patios de piedra.</p>
           <div class="event-card__actions">
             <a class="btn btn--dark btn--sm" target="_blank" rel="noopener" href="https://maps.app.goo.gl/YBDkMMQxXgvFts5F9">Cómo llegar</a>
@@ -242,24 +242,12 @@
       <li class="reveal"><time>3:00 p.m.</time><div><h4>Ceremonia religiosa</h4><p>Rectoría El Jesús Tercera Orden, en el centro de Mérida.</p></div></li>
       <li class="reveal"><time>6:00 p.m.</time><div><h4>Cóctel de bienvenida</h4><p>En los jardines de la Hacienda Xuku, en Seyé.</p></div></li>
       <li class="reveal"><time>7:00 p.m.</time><div><h4>Entrada de los novios</h4><p>Presentación de Dariana y Erick como esposos.</p></div></li>
-      <li class="reveal"><time>7:30 p.m.</time><div><h4>Cena</h4><p>Menú <span class="tbd">por confirmar</span></p></div></li>
+      <li class="reveal"><time>7:30 p.m.</time><div><h4>Cena</h4><p>Servida en la casa principal de la hacienda.</p></div></li>
       <li class="reveal"><time>8:00 p.m.</time><div><h4>Primer baile y vals</h4><p>Seguido del baile con los papás.</p></div></li>
       <li class="reveal"><time>9:00 p.m.</time><div><h4>¡A bailar!</h4><p>La fiesta corre a cargo de DJ Garry.</p></div></li>
       <li class="reveal"><time>3:00 a.m.</time><div><h4>Fin de la celebración</h4><p>Hasta aquí llega la música. Maneja con cuidado de regreso.</p></div></li>
+      <li class="reveal tornaboda"><time>Domingo<br>1:00 p.m.</time><div><h4>Tornaboda</h4><p>En casa de los papás del novio, en Seyé: C. 33 649, 97570 Seyé, Yucatán. <a href="https://maps.app.goo.gl/jXwsTKcD4ZypmTRd7" target="_blank" rel="noopener">Ver ubicación</a></p></div></li>
     </ul>
-  </div>
-</section>
-
-<!-- ============ MENÚ ============ -->
-<section class="section menu" id="menu">
-  <div class="container split">
-    <figure class="split__img reveal"><img src="img/menu.webp?v=5" alt="Mesa para dos con velas y flores el día de la pedida" loading="lazy"></figure>
-    <div class="split__body reveal">
-      <p class="eyebrow">A la mesa</p>
-      <h2>Menú</h2>
-      <p class="menu__pendiente">Dariana y Erick están afinando el menú con la hacienda. En cuanto lo cierren, aquí verás los tiempos y las opciones. <span class="tbd">Por confirmar</span></p>
-      <p class="menu__note">Si tienes alguna alergia o llevas una dieta especial, indícalo al confirmar tu asistencia y lo resolvemos con la cocina.</p>
-    </div>
   </div>
 </section>
 
@@ -367,9 +355,11 @@
         <span class="gift-card__logo">Transferencia</span>
         <dl class="bank">
           <dt>Banco</dt><dd>Santander</dd>
-          <dt>Titular</dt><dd>Dariana Aguilar</dd>
-          <dt>CLABE</dt><dd><span class="tbd">Por confirmar</span></dd>
+          <dt>Titular</dt><dd>Dariana Marilú Aguilar Trujillo</dd>
+          <dt>Cuenta</dt><dd><span id="clabe">5579 1004 2241 7566</span></dd>
         </dl>
+        <button class="btn btn--dark btn--sm" data-copy="clabe">Copiar número</button>
+        <small class="demo-note">Manda tu comprobante al 999 476 73 32</small>
       </article>
     </div>
   </div>
@@ -419,7 +409,7 @@
       </div>
       <div class="travel__item">
         <h4>🚗 Si llegas en auto</h4>
-        <p>Seyé está a unos <strong>30 minutos</strong> de Mérida por la carretera a Cancún. Estacionamiento en la hacienda <span class="tbd">por confirmar</span></p>
+        <p>Seyé está a unos <strong>30 minutos</strong> de Mérida por la carretera a Cancún. La hacienda tiene estacionamiento; la iglesia no, así que considera tiempo extra para estacionarte en el Centro.</p>
       </div>
     </div>
 
@@ -450,21 +440,6 @@
   </div>
 </section>
 
-<!-- ============ HASHTAG ============ -->
-<section class="section hashtag">
-  <div class="container narrow center reveal">
-    <p class="eyebrow">Comparte tus fotos</p>
-    <h2 class="hashtag__tag">Hashtag <span class="tbd">por confirmar</span></h2>
-    <div class="strip">
-      <img src="img/mini-perrito.webp?v=5" alt="Dariana y Erick con su perrito" loading="lazy">
-      <img src="img/mini-propuesta.webp?v=5" alt="La pedida de mano" loading="lazy">
-      <img src="img/mini-abrazo.webp?v=5" alt="Abrazo después del sí" loading="lazy">
-      <img src="img/mini-trio.webp?v=5" alt="Serenata con trío" loading="lazy">
-    </div>
-    <p>Dariana y Erick están eligiendo el hashtag para que todos suban sus fotos el día de la boda. Después del evento publicaremos aquí la galería oficial.</p>
-  </div>
-</section>
-
 <!-- ============ RSVP ============ -->
 <section class="section rsvp" id="rsvp">
   <div class="rsvp__bg" style="background-image:url('img/rsvp.webp?v=5')"></div>
@@ -473,7 +448,8 @@
       <header class="section__head">
         <p class="eyebrow">R.S.V.P.</p>
         <h2>Confirma tu asistencia</h2>
-        <p class="section__sub">Fecha límite para responder: <span class="tbd">Por confirmar</span></p>
+        <p class="section__sub">Por favor responde antes del <strong>13 de enero de 2027</strong>.</p>
+        <p class="rsvp__contacto">¿Dudas? Escríbenos al <a href="tel:+529993323010">999 332 3010</a></p>
         <p class="rsvp__passes" id="passesInfo">Hemos reservado <strong>2</strong> lugares en tu honor.</p>
       </header>
 
@@ -562,11 +538,13 @@
       <details><summary>¿Qué me pongo?</summary><p>Formal: vestido largo en tonos oscuros para ellas y esmoquin negro para ellos. Por favor evita el blanco, el rojo, el borgoña, el vino y el guinda. Toma en cuenta que el cóctel es en jardín y hay patios de piedra, así que el tacón ancho es buena idea.</p></details>
       <details><summary>¿Cómo llego de la iglesia a la hacienda?</summary><p>Son unos 30 minutos por la carretera a Cancún. Si prefieres no manejar, puedes contratar transporte con chofer con Cervera Travel al 999 159 1612.</p></details>
       <details><summary>¿Hará mucho calor? ¿Y los mosquitos?</summary><p>Febrero es de los meses más agradables en Yucatán: unos 30 °C de día y 19 °C de noche. En la hacienda habrá abanicos y repelente de mosquitos para todos.</p></details>
-      <details><summary>¿Hasta cuándo puedo confirmar?</summary><p>La fecha límite está <span class="tbd">por confirmar</span>. En cuanto Dariana y Erick la definan, la publicamos aquí.</p></details>
+      <details><summary>¿Hasta cuándo puedo confirmar?</summary><p>Tienes hasta el <strong>13 de enero de 2027</strong>. Después de esa fecha hay que cerrar la lista con la hacienda.</p></details>
       <details><summary>¿Puedo llevar acompañante?</summary><p>Los lugares están asignados por invitación. En la sección de confirmación verás cuántos lugares están reservados a tu nombre.</p></details>
-      <details><summary>¿Pueden ir niños?</summary><p><span class="tbd">Por confirmar</span>. En cuanto los novios lo definan, lo publicamos aquí.</p></details>
+      <details><summary>¿Pueden ir niños?</summary><p>La celebración es solo para adultos. Los únicos niños serán los que forman parte del cortejo de la novia.</p></details>
       <details><summary>¿A qué hora termina la fiesta?</summary><p>La celebración termina a las <strong>3:00 a.m.</strong></p></details>
-      <details><summary>Tengo otra duda, ¿con quién hablo?</summary><p>El contacto para dudas está <span class="tbd">por confirmar</span>. Mientras tanto, puedes escribirle directamente a Dariana o a Erick.</p></details>
+      <details><summary>Tengo otra duda, ¿con quién hablo?</summary><p>Escríbenos al <strong><a href="tel:+529993323010">999 332 3010</a></strong> y con gusto te ayudamos.</p></details>
+      <details><summary>¿Hay estacionamiento?</summary><p>En la hacienda sí. En la iglesia no hay estacionamiento propio, así que te sugerimos llegar con tiempo o usar alguno de los estacionamientos públicos del Centro.</p></details>
+      <details><summary>¿Habrá tornaboda?</summary><p>Sí. El domingo a la 1:00 p.m. en casa de los papás del novio, en Seyé (C. 33 649, 97570 Seyé). Están invitados.</p></details>
     </div>
   </div>
 </section>
@@ -603,6 +581,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/app.js?v=7" defer></script>
+<script src="js/app.js?v=8" defer></script>
 </body>
 </html>
