@@ -12,6 +12,8 @@
     hashtag: "#DarianayErick2027",
     // Subir este número cada vez que se reemplace una foto con el mismo nombre
     imgVersion: "5",
+    // A dónde se envían las confirmaciones (n8n -> Google Sheets)
+    endpointRsvp: "https://n8n.quikia.mx/webhook/rsvp-dariana-erick",
     storageRsvp: "dye27_rsvp",
     storageWishes: "dye27_wishes",
     mapas: {
@@ -271,6 +273,21 @@
   });
 
   /* ---------- RSVP ---------- */
+  function enviarRsvp(data) {
+    if (!CONFIG.endpointRsvp) return Promise.resolve(false);
+    // Se manda como formulario para evitar el preflight de CORS
+    const cuerpo = new URLSearchParams();
+    Object.entries(data).forEach(([k, v]) => cuerpo.append(k, v == null ? "" : String(v)));
+    return fetch(CONFIG.endpointRsvp, { method: "POST", body: cuerpo, keepalive: true })
+      .then((r) => r.ok)
+      .catch(() => false);
+  }
+
+  function marcarEnviado(data, ok) {
+    data.enviado = ok;
+    store.set(CONFIG.storageRsvp, data);
+  }
+
   const form = $("#rsvpForm");
   const attendFields = $("#attendFields");
   const formError = $("#formError");
@@ -325,10 +342,11 @@
     data.invitado = invitado || null;
     data.pases = pases;
     data.fecha_respuesta = new Date().toISOString();
-    if (!store.set(CONFIG.storageRsvp, data)) {
-      // Sin almacenamiento local la confirmación igual se muestra; el aviso real va por WhatsApp.
-      toast("Respuesta registrada en esta sesión");
-    }
+    store.set(CONFIG.storageRsvp, data);
+    enviarRsvp(data).then((ok) => {
+      marcarEnviado(data, ok);
+      if (!ok) toast("No pudimos guardar tu respuesta, avísanos por WhatsApp");
+    });
     showDone(data);
     done.scrollIntoView({ behavior: "smooth", block: "center" });
   });
@@ -351,6 +369,9 @@
     });
     syncAttend();
     showDone(savedRsvp);
+    if (savedRsvp.enviado === false) {
+      enviarRsvp(savedRsvp).then((ok) => { if (ok) marcarEnviado(savedRsvp, true); });
+    }
   }
 
   /* ---------- Buenos deseos ---------- */
