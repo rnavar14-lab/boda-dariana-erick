@@ -11,7 +11,7 @@
     maxPases: 8,
     hashtag: "#DarianayErick2027",
     // Subir este número cada vez que se reemplace una foto con el mismo nombre
-    imgVersion: "5",
+    imgVersion: "6",
     // A dónde se envían las confirmaciones (n8n -> Google Sheets)
     endpointRsvp: "https://n8n.quikia.mx/webhook/rsvp-dariana-erick",
     storageRsvp: "dye27_rsvp",
@@ -21,8 +21,7 @@
       recepcion: "https://maps.google.com/maps?q=Hacienda%20Xuku%2C%20Sey%C3%A9%2C%20Yucat%C3%A1n&z=14&output=embed"
     },
     galeria: [
-      "foto-beso-manos", "foto-abrazo", "foto-propuesta", "foto-perrito",
-      "foto-beso-mejilla", "foto-trio", "foto-sillas"
+      "g-01", "g-02", "g-03", "g-04", "g-05", "g-06", "g-07", "g-08", "g-09"
     ],
     deseosDemo: []
   };
@@ -233,7 +232,7 @@
     b.type = "button";
     b.setAttribute("aria-label", `Ver foto ${i + 1}`);
     b.className = `g-${i + 1}`;
-    b.innerHTML = `<img src="img/${name}.webp?v=${CONFIG.imgVersion}" alt="Dariana y Erick, foto ${i + 1}" loading="lazy">`;
+    b.innerHTML = `<img src="img/${name}.webp?v=${CONFIG.imgVersion}" alt="Dariana y Erick, foto ${i + 1} de su save the date y su civil" loading="lazy">`;
     b.addEventListener("click", () => openLightbox(i));
     masonry.appendChild(b);
   });
@@ -293,10 +292,44 @@
   const formError = $("#formError");
   const done = $("#rsvpDone");
 
+  const nombresWrap = $("#nombresWrap");
+  const nombresCaja = $("#nombresInvitados");
+
+  function pintarNombres() {
+    if (!nombresCaja) return;
+    const total = Number(guestCount.value || 1);
+    const previos = $$("input", nombresCaja).map((i) => i.value);
+    nombresCaja.innerHTML = "";
+    for (let i = 1; i <= total; i++) {
+      const fila = document.createElement("label");
+      fila.className = "nombres__fila";
+      const etiqueta = document.createElement("span");
+      etiqueta.textContent = i;
+      const campo = document.createElement("input");
+      campo.type = "text";
+      campo.name = "invitado_" + i;
+      campo.placeholder = i === 1 ? "Nombre de quien confirma" : "Nombre del invitado " + i;
+      campo.autocomplete = "off";
+      if (previos[i - 1]) campo.value = previos[i - 1];
+      fila.append(etiqueta, campo);
+      nombresCaja.appendChild(fila);
+    }
+    nombresWrap.hidden = total < 1;
+  }
+
+  guestCount.addEventListener("change", pintarNombres);
+  pintarNombres();
+
   function syncAttend() {
     const v = form.asistencia.value;
     attendFields.classList.toggle("is-off", v === "no");
   }
+  $("#rsvpName").addEventListener("input", (e) => {
+    const primero = $("input[name='invitado_1']", nombresCaja);
+    if (primero && !primero.dataset.tocado) primero.value = e.target.value;
+  });
+  nombresCaja.addEventListener("input", (e) => { e.target.dataset.tocado = "1"; });
+
   $$('input[name="asistencia"]', form).forEach((r) => r.addEventListener("change", () => {
     syncAttend();
     r.closest(".field").classList.remove("is-invalid");
@@ -339,6 +372,9 @@
     }
     const data = Object.fromEntries(new FormData(form).entries());
     data.nombre = data.nombre.trim();
+    const nombres = $$("input", nombresCaja).map((i) => i.value.trim()).filter(Boolean);
+    data.acompanantes = data.asistencia === "si" ? nombres.join(", ") : "";
+    $$("input", nombresCaja).forEach((i) => { delete data[i.name]; });
     data.invitado = invitado || null;
     data.pases = pases;
     data.fecha_respuesta = new Date().toISOString();
