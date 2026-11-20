@@ -15,15 +15,13 @@
     // A dónde se envían las confirmaciones (n8n -> Google Sheets)
     endpointRsvp: "https://n8n.quikia.mx/webhook/rsvp-dariana-erick",
     storageRsvp: "dye27_rsvp",
-    storageWishes: "dye27_wishes",
     mapas: {
       ceremonia: "https://maps.google.com/maps?q=Rector%C3%ADa%20El%20Jes%C3%BAs%20Tercera%20Orden%2C%20M%C3%A9rida&z=16&output=embed",
       recepcion: "https://maps.google.com/maps?q=Hacienda%20Xuku%2C%20Sey%C3%A9%2C%20Yucat%C3%A1n&z=14&output=embed"
     },
     galeria: [
-      "g-01", "g-02", "g-03", "g-04", "g-05", "g-06", "g-07", "g-08", "g-09"
-    ],
-    deseosDemo: []
+      "g-02", "g-04", "g-06", "g-07", "g-08", "g-09"
+    ]
   };
 
   const $ = (s, el = document) => el.querySelector(s);
@@ -410,33 +408,4 @@
     }
   }
 
-  /* ---------- Buenos deseos ---------- */
-  const wall = $("#wishWall");
-  const wishForm = $("#wishForm");
-  function wishNode(w, isNew) {
-    const art = document.createElement("article");
-    art.className = "wish" + (isNew ? " is-new" : "");
-    const p = document.createElement("p"); p.textContent = w.texto;
-    const f = document.createElement("footer"); f.textContent = w.autor;
-    art.append(p, f);
-    return art;
-  }
-  const wishEmpty = $("#wishEmpty");
-  const userWishes = store.get(CONFIG.storageWishes, []);
-  [...userWishes].reverse().concat(CONFIG.deseosDemo).forEach((w) => wall.appendChild(wishNode(w, false)));
-  function syncWishEmpty() { if (wishEmpty) wishEmpty.hidden = wall.children.length > 0; }
-  syncWishEmpty();
-  wishForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const autor = wishForm.autor.value.trim();
-    const texto = wishForm.texto.value.trim();
-    if (!autor || !texto) { toast("Escribe tu nombre y tu mensaje"); return; }
-    const w = { autor, texto };
-    userWishes.push(w);
-    store.set(CONFIG.storageWishes, userWishes);
-    wall.prepend(wishNode(w, true));
-    syncWishEmpty();
-    wishForm.reset();
-    toast("¡Gracias por tus buenos deseos!");
-  });
 })();

@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="img/hero.webp?v=6" media="(min-width: 761px)">
   <link rel="preload" as="image" href="img/hero-movil.webp?v=6" media="(max-width: 760px)">
-  <link rel="stylesheet" href="css/styles.css?v=15">
+  <link rel="stylesheet" href="css/styles.css?v=16">
 </head>
 <body class="is-locked">
 
@@ -57,7 +57,7 @@
 <section class="hero" id="inicio">
   <picture class="hero__bg">
     <source media="(max-width: 760px)" srcset="img/hero-movil.webp?v=6">
-    <img src="img/hero.webp?v=6" alt="Erick besa en la mejilla a Dariana frente a la barranca al atardecer" fetchpriority="high">
+    <img src="img/hero.webp?v=6" alt="Dariana y Erick bajo el arco de piedra de su save the date" fetchpriority="high">
   </picture>
   <div class="hero__shade"></div>
   <div class="hero__content">
@@ -83,7 +83,7 @@
 <section class="section invitation" id="invitacion">
   <div class="container narrow center reveal">
     <p class="guest-banner" id="guestBanner" hidden></p>
-    <figure class="portrait"><img src="img/retrato.webp?v=6" alt="Erick besa las manos de Dariana" loading="lazy"></figure>
+    <figure class="portrait"><img src="img/retrato.webp?v=6" alt="Dariana y Erick sentados en la escalinata de piedra" loading="lazy"></figure>
     <p class="script">Con la bendición de Dios</p>
     <p class="lead">y el amor de nuestros padres</p>
     <div class="parents">
@@ -217,7 +217,7 @@
           <svg viewBox="0 0 48 48"><path d="M17 6l7 6 7-6 6 6-5 5v25H16V17l-5-5z"/><path d="M24 12v8l-3 4 3 3 3-3-3-4"/></svg>
         </div>
         <h3>Ellos</h3>
-        <p>Esmoquin en color negro o traje formal. Por favor evita el blanco, que está reservado para los novios.</p>
+        <p>Smoking en color negro o traje formal. Por favor evita el blanco, que está reservado para los novios.</p>
       </div>
       <div class="dress-card reveal">
         <div class="dress-card__icon" aria-hidden="true">
@@ -252,7 +252,7 @@
       <h2>Padrinos</h2>
     </header>
     <div class="godparents reveal">
-      <div class="godparent"><span class="godparent__role">Velación</span><p>Divvani Pacheco Aguilar<br>Rafael Navarro Orozco</p></div>
+      <div class="godparent"><span class="godparent__role">Velación</span><p>Divvany Claudette Pacheco Aguilar<br>Rafael Alejandro Navarro Orozco</p></div>
       <div class="godparent"><span class="godparent__role">Anillos</span><p>Olga María Villalobos Cross<br>Russell Iván Pool Alonzo</p></div>
       <div class="godparent"><span class="godparent__role">Arras</span><p>Juan Diego Cardós Rodríguez<br>Susy Rejón Cervantes</p></div>
       <div class="godparent"><span class="godparent__role">Biblia y rosario</span><p>Dina Ramírez Trindade<br>Javier Orozco Ávila</p></div>
@@ -425,19 +425,10 @@
             <div class="nombres" id="nombresInvitados"></div>
           </div>
           <label class="field">
-            <span>Alergias o restricciones alimentarias</span>
-            <input type="text" name="alergias" placeholder="Ej. sin gluten, alergia a nueces">
-          </label>
-          <label class="field">
             <span>Una canción que no puede faltar 🎶</span>
             <input type="text" name="cancion" placeholder="Para la lista de ARAZ Producciones">
           </label>
         </div>
-
-        <label class="field">
-          <span>Mensaje para los novios</span>
-          <textarea name="mensaje" rows="3" placeholder="Escríbenos algo bonito"></textarea>
-        </label>
 
         <p class="form__error" id="formError" hidden></p>
         <button type="submit" class="btn btn--dark btn--block">Enviar confirmación</button>
@@ -454,24 +445,6 @@
   </div>
 </section>
 
-<!-- ============ BUENOS DESEOS ============ -->
-<section class="section wishes" id="deseos">
-  <div class="container">
-    <header class="section__head reveal">
-      <p class="eyebrow">Libro de firmas</p>
-      <h2>Buenos deseos</h2>
-      <p class="section__sub">Déjales unas palabras. Las leerán juntos en su primer aniversario.</p>
-    </header>
-    <form class="wish-form reveal" id="wishForm">
-      <input type="text" name="autor" placeholder="Tu nombre" required maxlength="40">
-      <input type="text" name="texto" placeholder="Tu mensaje para Dariana y Erick" required maxlength="220">
-      <button type="submit" class="btn btn--dark">Publicar</button>
-    </form>
-    <p class="wishes__vacio" id="wishEmpty">Sé el primero en dejarles un mensaje.</p>
-    <div class="wishes__wall" id="wishWall"></div>
-  </div>
-</section>
-
 <!-- ============ FAQ ============ -->
 <section class="section faq" id="faq">
   <div class="container narrow">
@@ -481,7 +454,7 @@
     </header>
     <div class="accordion reveal">
       <details><summary>¿A qué hora debo llegar?</summary><p>La misa empieza a las <strong>3:00 p.m.</strong> en la Rectoría El Jesús Tercera Orden. Te sugerimos llegar a las 2:30 p.m., porque estacionarse en el Centro puede tomar tiempo. La recepción arranca a las 6:45 p.m. en la Hacienda Xuku, en Seyé.</p></details>
-      <details><summary>¿Qué me pongo?</summary><p>Formal: vestido largo en tonos oscuros para ellas y esmoquin negro para ellos. Por favor evita el blanco, el rojo, el borgoña, el vino y el guinda. Toma en cuenta que el cóctel es en jardín y hay patios de piedra, así que el tacón ancho es buena idea.</p></details>
+      <details><summary>¿Qué me pongo?</summary><p>Formal: vestido largo para ellas y smoking negro o traje formal para ellos. Por favor evita el blanco, el rojo, el borgoña, el vino y el guinda. Toma en cuenta que el cóctel es en jardín y hay patios de piedra, así que el tacón ancho es buena idea.</p></details>
       <details><summary>¿Cómo llego de la iglesia a la hacienda?</summary><p>Son unos 30 minutos por la carretera a Cancún. Si prefieres no manejar, puedes contratar transporte con chofer con VOYAGE Travel al 9992 574133.</p></details>
       <details><summary>¿Hará mucho calor? ¿Y los mosquitos?</summary><p>Febrero es de los meses más agradables en Yucatán: unos 30 °C de día y 19 °C de noche. En la hacienda habrá abanicos y repelente de mosquitos para todos.</p></details>
       <details><summary>¿Hasta cuándo puedo confirmar?</summary><p>Tienes hasta el <strong>13 de enero de 2027</strong>. Después de esa fecha hay que cerrar la lista con la hacienda.</p></details>
@@ -527,6 +500,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/app.js?v=10" defer></script>
+<script src="js/app.js?v=11" defer></script>
 </body>
 </html>
